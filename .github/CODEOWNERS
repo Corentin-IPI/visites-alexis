@@ -1,0 +1,8 @@
+# .github/CODEOWNERS
+# Les derniers motifs l'emportent
+*            @Corentin-IPI @Alex-8970
+/.github/    @Corentin-IPI
+/infra/      @Corentin-IPI
+/app/        @Alex-8970
+/monitoring/ @Alex-8970
+/docs/       @Corentin-IPI @Alex-8970
