@@ -1,4 +1,5 @@
 import time
+
 import redis
 from fastapi import FastAPI, Request, Response
 from prometheus_client import CONTENT_TYPE_LATEST, Counter, Histogram, generate_latest
@@ -34,10 +35,12 @@ def root(response: Response):
     n = r.incr("visites")
     return {"visites": n}
 
+
 @app.post("/reset")
 def reset():
     r.set("visites", 0)
     return {"visites": 0}
+
 
 @app.get("/health")
 def health():
